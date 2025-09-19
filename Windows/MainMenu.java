@@ -19,14 +19,17 @@ public class MainMenu extends JFrame {
                 g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
             }
         };
-        backgroundPanel.setLayout(new BorderLayout());
+        backgroundPanel.setLayout(null);
 
-        JLabel label = new JLabel("Hello on top of background!", SwingConstants.CENTER);
-        label.setForeground(Color.WHITE);
-        JButton button = new JButton("Click Me");
-
-        backgroundPanel.add(label, BorderLayout.CENTER);
-        backgroundPanel.add(button, BorderLayout.SOUTH);
+        JButton startButton = new JButton("Start");
+        JButton instrucButton = new JButton("Instructions");
+        JButton exitButton = new JButton("Exit");
+        startButton.setBounds(475, 475, 350, 70);
+        instrucButton.setBounds(475, 550, 350, 70);
+        exitButton.setBounds(475, 630, 350, 70);
+        backgroundPanel.add(startButton);
+        backgroundPanel.add(instrucButton);
+        backgroundPanel.add(exitButton);
 
         setContentPane(backgroundPanel);
 
